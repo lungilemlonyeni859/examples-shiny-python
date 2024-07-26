@@ -2,10 +2,16 @@ import faicons as fa
 import plotly.express as px
 import pandas as pd
 
+import subprocess
+import json
+import os
+
 # Load data and compute static values
 from shiny import reactive, render
 from shiny.express import input, ui
 from shinywidgets import render_plotly
+
+os.system("lscpu")
 
 tips = pd.read_csv("data/tips.csv")
 ui.include_css("styles.css")
